@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+src=~/tmp/testing-gen/TestMaven
+trg=~/Projects/Node/Playground/rstamp-maven-1/tree.txt
+
+# Assumes a rstamp-maven-1 template generated into the directory TestMaven
+
+# This removes files and directories inside of the .git/ folder so that the
+# tree doesn't include all the files used by Git.
+find $src/.git/* -d -type d | xargs rm -r
+
+# This removes the directory produced by running mvn package which is
+# ran directly after rstamp generates the project.  As does git init
+# which is why it's dealt with by the previous command.
+rm -r $src/target
+
+# Generates the tree of files created by the maven-1 generator minus
+# the .git/ and target/ directory because we don't want those file
+# added to the readme as a snippet. (The --noreport supresses counts
+# of files and directories from the tree output.)
+tree --noreport -a "$src" -o "$trg"

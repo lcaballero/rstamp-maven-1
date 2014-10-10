@@ -1,0 +1,21 @@
+/Users/lucas.caballero/tmp/testing-gen/TestMaven
+├── .git
+│   ├── HEAD
+│   ├── config
+│   └── description
+├── .gitignore
+├── license
+├── pom.xml
+├── readme.md
+└── src
+    ├── main
+    │   └── java
+    │       └── first
+    │           └── pkg
+    │               ├── App.java
+    │               └── Main.java
+    └── test
+        └── java
+            └── first
+                └── pkg
+                    └── AppTest.java
