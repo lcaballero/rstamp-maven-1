@@ -95,4 +95,5 @@ notice, or any other, from this software.
 
 [EPL-1]: http://opensource.org/licenses/eclipse-1.0.txt
 [rstamp-cli]: https://www.npmjs.org/package/rstamp-cli
+[rstamp-maven-1]: https://github.com/lcaballero/rstamp-maven-1
 
